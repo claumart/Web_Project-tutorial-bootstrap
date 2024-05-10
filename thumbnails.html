@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang = en>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>tutorial bootstrap-thumbnails</title>
+		<meta name= "viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+		<link rel="icon" type="image/png" href="images/favicon-bootstrap.png">
+		<link rel= "stylesheet" href= "css/bootstrap.min.css">
+		<link rel= "stylesheet" href= "hojas-estilo/tutoriales.css">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top navbar navbar-inverse barra-header">
+  				<div class="container-fluid">
+   	 				<!-- Brand and toggle get grouped for better mobile display -->
+    				<div class="navbar-header">
+      					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        					<span class="sr-only">Toggle navigation</span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+      					</button>
+      					<a class="navbar-brand" href="inicio.html"><img alt="Brand" src="images/home-icon.png" width= 40px class="img-brand"></a>
+    				</div>
+
+    				<!-- Collect the nav links, forms, and other content for toggling -->
+    				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      					<ul class="nav navbar-nav">
+							<li class="dropdown">
+          					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Temario <span class="caret"></span></a>
+		      					<ul class="dropdown-menu">
+		        					<li><a href="navs.html"><p class="toggle-menu">NAVS</p></a></li>
+		        					<li><a href="navbars.html"><p class="toggle-menu">NAVBARS</p></a></li>
+		        					<li><a href="glyphicons.html"><p class="toggle-menu">GLYPHICONS</p></a></li>
+		        					<li><a href="labels.html"><p class="toggle-menu">LABELS</p></a></li>
+		        					<li><a href="jumbotron.html"><P class="toggle-menu">JUMBOTRON</P></a></li>
+		        					<li><a href="thumbnails.html"><p class="toggle-menu">THUMBNAILS</p></a></li>
+		        					<li><a href="buttons.html"><p class="toggle-menu">BUTTONS</p></a></li>
+		        					<li><a href="breadcrumbs.html"><p class="toggle-menu">BREADCRUMNS</p></a></li>
+		        					<li><a href="panels.html"><p class="toggle-menu">PANELS</p></a></li>
+		        					<li><a href="pagination.html"><p class="toggle-menu">PAGINATION</p></a></li>
+		        					<li><a href="progressbar.html"><p class="toggle-menu">PROGRESSBAR</p></a></li>
+		        					<li><a href="alerts.html"><p class="toggle-menu">ALERTS</p></a></li>
+		      					</ul>
+        					</li>
+        					<li><a href="form.html">Boletines <span class="sr-only">(current)</span></a></li>
+      					</ul>
+      					<ul class="nav navbar-nav navbar-right">
+        					<li>
+								<form class="navbar-form navbar-left" role="search">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Search">
+									</div>
+									<button type="submit" class="btn-default"><p class="boton-buscar text-center">Buscar</p></button>
+								</form>
+        					</li>
+      					</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+			<div class= "row separador">
+				<div clas= "col-xs-12">
+					<img src="images/barra separadora mod 3 inversa.png" alt="separador" width=100% id="separador-header">
+				</div>
+			</div>
+		</header>
+
+		<!--Aqui empieza el contenido-->
+		
+
+		<section class="main-container">	
+			<div class="row"> 
+				<div class="col-sm-9 ">
+					<section class="titulo">
+						<h2 class="text-center animated tada">THUMBNAILS</h2>
+					</section>
+					<section class= "explicacion text-justify">
+						<p>	
+							Gracias a la rejilla de Bootstrap 3 explicada en los capítulos anteriores y gracias al componente de los thumbnails 
+							(en español, "imagenes en miniatura"), resulta muy sencillo crear galerías de imágenes y vídeos.
+						</p>
+						<h3>Ejemplo Sencillo</h3>
+						<p>El componente de imágenes en miniatura de Bootstrap 3 está diseñado para mostrar lo más fácilmente posible varias imágenes que enlazan con su versión en alta resolución. Ejemplo:</p>
+					</section>
+					
+					<section class= "codigo">
+						<pre>
+&ltdiv class="row"&gt
+  &ltdiv class="col-sm-6 col-md-3"&gt
+    &lta href="#" class="thumbnail"&gt
+      &ltimg data-src="..." alt="..."&gt
+    &lt/a&gt
+  &lt/div&gt
+  ...
+&lt/div&gt
+						</pre>
+					</section>
+					<section class="resultado">
+						<h4>
+							Resultado
+						</h4>
+						<div class="ejemplo">							
+							<div class="row">
+							  <div class="col-sm-6 col-md-3">
+								<a href="#" class="thumbnail">
+								  <img src="images/thumbnails1.png" alt="imagen">
+								</a>
+							  </div>
+							  <div class="col-sm-6 col-md-3">
+								<a href="#" class="thumbnail">
+								  <img src="images/thumbnails1.png" alt="imagen">
+								</a>
+							  </div>
+							  <div class="col-sm-6 col-md-3">
+								<a href="#" class="thumbnail">
+								  <img src="images/thumbnails1.png" alt="imagen">
+								</a>
+							  </div>
+							</div>
+						</div>
+						<br>
+						<br>
+					</section>
+					<section class= "explicacion text-justify">
+						<h3>Añadiendo Contenido a las Imágenes en Miniatura</h3>
+						<p>
+							Añadiendo un poco de código HTML es posible añadir títulos, párrafos,
+							 botones o cualquier otro elemento a cada imagen en miniatura. Ejemplo:
+						</p>
+					</section>
+					
+					<section class= "codigo">
+						<pre>
+&ltdiv class="row"&gt
+  &ltdiv class="col-sm-6 col-md-4"&gt
+    &ltdiv class="thumbnail"&gt
+      &ltimg data-src="..." alt="..."&gt
+      &ltdiv class="caption"&gt
+        &lth3&gtTítulo de la imagen&lt/h3&gt
+        &ltp&gt...&lt/p&gt
+        &ltp&gt
+          &lta href="#" class="btn btn-primary" role="button"&gtBotón&lt/a&gt
+          &lta href="#" class="btn btn-default" role="button"&gtBotón&lt/a&gt
+        &lt/p&gt
+      &lt/div&gt
+    &lt/div&gt
+  &lt/div&gt
+&lt/div&gt
+						</pre>
+					</section>
+					<section ="resultado">
+						<h4>
+							Resultado
+						</h4>
+						<div class="ejemplo">
+							<div class="row">
+							  <div class="col-sm-6 col-md-4">
+								<div class="thumbnail">
+								  <img src="images/thumbnails2.png" alt="imagen">
+								  <div class="caption">
+									<h3>Título de la imagen</h3>
+									<p>Aquí se escribe algún texto representativo de la imagen</p>
+									<p>
+									  <a href="#" class="btn btn-primary" role="button">Botón</a>
+									  <a href="#" class="btn btn-warning" role="button">Botón</a>
+									</p>
+								  </div>
+								</div>
+							  </div>
+							  <div class="col-sm-6 col-md-4">
+								<div class="thumbnail">
+								  <img src="images/thumbnails2.png" alt="imagen">
+								  <div class="caption">
+									<h3>Título de la imagen</h3>
+									<p>Aquí se escribe algún texto representativo de la imagen</p>
+									<p>
+									  <a href="#" class="btn btn-primary" role="button">Botón</a>
+									  <a href="#" class="btn btn-warning" role="button">Botón</a>
+									</p>
+								  </div>
+								</div>
+							  </div>
+							  <div class="col-sm-6 col-md-4">
+								<div class="thumbnail">
+								  <img src="images/thumbnails2.png" alt="imagen">
+								  <div class="caption">
+									<h3>Título de la imagen</h3>
+									<p>Aquí se escribe algún texto representativo de la imagen</p>
+									<p>
+									  <a href="#" class="btn btn-primary" role="button">Botón</a>
+									  <a href="#" class="btn btn-warning" role="button">Botón</a>
+									</p>
+								  </div>
+								</div>
+							  </div>
+							</div>
+						</div>
+						<br>
+						<br>
+					</section>
+					<div class="video">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/REaS623JUZI"></iframe>
+						</div>
+					</div>
+					
+					
+				</div>
+				<aside class="col-sm-3 hidden-xs">
+					<h1 class="text-center texto-aside">
+						OTROS TEMAS
+					</h1>
+					<div class="list-group">
+						<a href="navbars.html" class="list-group-item text-center"><p class="prueba">NAVBARS</p></a>
+						<a href="glyphicons.html" class="list-group-item text-center"><p class="prueba">GLYPHICONS</p></a>
+						<a href="labels.html" class="list-group-item text-center"><p class="prueba">LABELS</p></a>
+						<a href="jumbotron.html" class="list-group-item text-center"><p class="prueba">JUMBOTRON</p></a>
+						<a href="thumbnails.html" class="list-group-item text-center"><p class="prueba">THUMBNAILS</p></a>
+						<a href="buttons.html" class="list-group-item text-center"><p class="prueba">BUTTONS</p></a>
+						<a href="breadcrumbs.html" class="list-group-item text-center"><p class="prueba">BREADCRUMBS</p></a>
+						<a href="panels.html" class="list-group-item text-center"><p class="prueba">PANELS</p></a>
+						<a href="pagination.html" class="list-group-item text-center"><p class="prueba">PAGINATION</p></a>
+						<a href="progressbar.html" class="list-group-item text-center"><p class="prueba">PROGRESSBAR</p></a>
+						<a href="alerts.html" class="list-group-item text-center"><p class="prueba">ALERTS</p></a>
+					</div>
+				</aside>
+			</div>
+		</section>
+		
+			
+		
+		<footer>
+			<div class= "row separador">
+				<div clas= "col-xs-12">
+					<img src="images/barra separadora mod 3.png" alt="separador" width=100%>
+				</div>
+			</div>
+			<div class="footer-region">
+				<div class="container">
+				
+					<div class="row link-externo">
+						<div class="col-xs-12">
+							<ul class="list-inlie">
+								<li><a href="https://www.facebook.com/getbootstrap/"><img src="images/facebook-icon.png" alt="nav" width=50px class="img-externa"></a></li>
+								<li><a href="https://twitter.com/getbootstrap"><img src="images/twitter-icon.png" alt="nav" width= 50px class="img-externa"></a></li>
+								<li><a href="http://getbootstrap.com/"><img src="images/bootstrap-icon.png" alt="nav" width= 50px class="img-externa"></a></li>
+							</ul>
+						</div><!-- /.col-xs-12 -->
+					</div>
+					<div class="row link-externo">
+						<div class="col-xs-12">
+							<p class="text-center">Este tutorial es creado con fines educativos para la clase de Sistemas expertos</p>
+							<p class="text-center">Facultad de Ingeniería en Sistamas, Segundo Periodo 2016</p>
+							<p class="text-center">UNAH Ciundad Universitaria, Tegucigalpa Honduras</p>
+						</div><!-- /.col-xs-12 -->
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src= "js/jquery.min.js"></script>
+		<script src= "js/bootstrap.min.js"></script>
+	</body>	
+</html>

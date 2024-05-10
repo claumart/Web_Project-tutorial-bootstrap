@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang = en>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Tutorial-bootstrap-inicio</title>
+		<meta name= "viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+		<link rel="icon" type="image/png" href="images/favicon-bootstrap.png">
+		<link rel= "stylesheet" href= "css/bootstrap.min.css">
+		<link rel= "stylesheet" href= "hojas-estilo/inicio.css">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top navbar navbar-inverse barra-header">
+  				<div class="container-fluid">
+   	 				<!-- Brand and toggle get grouped for better mobile display -->
+    				<div class="navbar-header">
+      					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        					<span class="sr-only">Toggle navigation</span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+      					</button>
+      					<a class="navbar-brand" href="inicio.html"><img alt="Brand" src="images/home-icon.png" width= 40px class="im-link"></a>
+    				</div>
+
+    				<!-- Collect the nav links, forms, and other content for toggling -->
+    				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      					<ul class="nav navbar-nav">
+							<li class="dropdown">
+          					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Temario <span class="caret"></span></a>
+		      					<ul class="dropdown-menu">
+		        					<li><a href="navs.html"><p class="toggle-menu">NAVS</p></a></li>
+		        					<li><a href="navbars.html"><p class="toggle-menu">NAVBARS</p></a></li>
+		        					<li><a href="glyphicons.html"><p class="toggle-menu">GLYPHICONS</p></a></li>
+		        					<li><a href="labels.html"><p class="toggle-menu">LABELS</p></a></li>
+		        					<li><a href="jumbotron.html"><P class="toggle-menu">JUMBOTRON</P></a></li>
+		        					<li><a href="thumbnails.html"><p class="toggle-menu">THUMBNAILS</p></a></li>
+		        					<li><a href="buttons.html"><p class="toggle-menu">BUTTONS</p></a></li>
+		        					<li><a href="breadcrumbs.html"><p class="toggle-menu">BREADCRUMNS</p></a></li>
+		        					<li><a href="panels.html"><p class="toggle-menu">PANELS</p></a></li>
+		        					<li><a href="pagination.html"><p class="toggle-menu">PAGINATION</p></a></li>
+		        					<li><a href="progressbar.html"><p class="toggle-menu">PROGRESSBAR</p></a></li>
+		        					<li><a href="alerts.html"><p class="toggle-menu">ALERTS</p></a></li>
+		      					</ul>
+        					</li>
+        					<li><a href="form.html">Boletines <span class="sr-only">(current)</span></a></li>
+      					</ul>
+      					<ul class="nav navbar-nav navbar-right">
+        					<li>
+								<form class="navbar-form navbar-left" role="search">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Search">
+									</div>
+									<button type="submit" class="btn-default"><p class="boton-buscar text-center">Buscar</p></button>
+								</form>
+        					</li>
+      					</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+			<div class="container">
+				<div class="row titulo-header">
+					<div class= "col-xs-12">
+						<h1 class="text-center animated rubberBand"> TUTORIAL BOOTSTRAP</h1>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class= "row separador">
+					<div clas= "col-xs-12">
+						<img src="images/logobs1.png" alt="logo" class="img-responsive imagen-header pulse" width=10%>
+					</div>
+				</div>
+			</div>
+						
+				<div class= "row separador">
+					<div clas= "col-xs-12">
+						<img src="images/barra separadora mod 3 inversa.png" alt="separador" width=100% id="separador-header">
+					</div>
+				</div>
+		</header>
+		
+
+		<section class="main-container">
+			<div class="container descripcion">
+				<div class="row titulo"> 
+					<div class="col-xs-12 text-center">
+						<h2>¿Qué es Bootstrap?</h2>
+					</div>
+				</div>
+				<div class="row">
+					<section class="col-xs-12 text-justify">
+						<p>
+							Bootstrap, es un framework originalmente creado por Twitter, que permite crear interfaces web con CSS y JavaScript, 
+							 cuya particularidad es la de adaptar la interfaz del sitio web al tamaño del dispositivo en que se visualice. Es decir, 
+							 el sitio web se adapta automáticamente al tamaño de una PC, una Tablet u otro dispositivo. Esta técnica de diseño y 
+							 desarrollo se conoce como “responsive design” o diseño adaptativo.<br><br>
+						</p>
+						<p>
+							El beneficio de usar responsive design en un sitio web, es principalmente que el sitio web se adapta automáticamente 
+							al dispositivo desde donde se acceda. A partir de la versión 3.x ha sido implementado pensando que se adapte tanto a 
+							las pantallas de equipos de escritorio como a móviles y tablets.<br><br>
+						</p>
+						<p>
+							Bootstrap ha sido desarrollada y es mantenida por la empresa Twitter y la ha liberado como un producto Open Source.
+							Tiene una filosofía muy intuitiva para el maquetado de sitios web que puede ser rápidamente aprendida por desarrolladores 
+							que no vienen del mundo del diseño web.
+						</p>
+					</section>
+				</div>
+				<div class="row imagen">
+					<section class="col-xs-12">
+						<img src="images/responsive.png" alt="pajaro" class="img-que-es img-responsive">
+					</section>
+				</div>
+			</div>
+			<div class="container descripcion">
+				<div class="row titulo">
+					<div class="col-xs-12 text-center">
+						<h2>¿Qué Necesitas Para Utilizar Bootstrap?</h2>
+					</div>
+				</div>
+				<div class="row">
+					<section class="col-xs-12  text-justify texto"> 
+						<p>
+							El corazón de este framework es un archivo CSS que lo podemos descargar del sitio <a href="http://getbootstrap.com/" target="_blank">http://getbootstrap.com</a>.
+							Luego debemos enlazar a nuestra página con el archivo boottrap.min.css y ya podemos utilizar esta librería.
+							Aparte del archivo anterior lo que necesitas para utilizar y aprender a desarrollar en este estupendo framework 
+							son un conjunto de herramientas y conocimientos listados a continuación:<br><br>
+						</p>
+						<ul>
+							<li>Conocimiento de HTML</li>
+							<li>Conocimiento de CSS</li>
+							<li>Contar con un navegador web</li>
+							<li>Tener instalados los servicios de Apache</li>
+							<li>Muchas ganas y deseos de aprender</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+			<div class="container descripcion">
+				<div class="row titulo">
+					<div class="col-xs-12 text-center">
+						<h2>¿Cómo se Compone Bootstrap?</h2>
+					</div>
+				</div>
+				<div class="row">
+					<section class="col-xs-12 text-justify texto">
+						<p>
+							Bootstrap esta formado por una serie de clases que permiten modidicar el comportamiento del
+							contenido de un documendo HTML de madera que este se visualize de una forma más amigable e intuitiva
+							para el usuario.<br><br>
+						</p>
+
+						<div class="table-responsive">	
+							 <table class="table">
+							<tr>
+								<td>Glyphicons</td>
+								<td>Dropdowns</td>
+								<td>Button Groups</td>
+								<td>Button Dropdowns</td>
+								<td>Input Groups</td>
+							</tr>
+							<tr>
+								<td>Navs</td>
+								<td>Navbars</td>
+								<td>Breadcrumbs</td>
+								<td>Pagination</td>
+								<td>Labels</td>
+							</tr>
+							<tr>
+								<td>Bages</td>
+								<td>Jumbotron</td>
+								<td>Page Header</td>
+								<td>Thumbnails</td>
+								<td>Alerts</td>
+							</tr>
+							<tr>
+								<td>Progress Bars</td>
+								<td>Media Object</td>
+								<td>List Group</td>
+								<td>Panels</td>
+								<td>Responsive Embed</td>
+							</tr>
+						</table>
+						</div>
+					</section>
+				</div>
+			</div>
+			
+			<div class="container enlaces">
+				<div class= "container titulo-enlaces">
+					<section class="row titulo">
+						<div class="col-xs-12 text-center">
+							<h2>Tutorial</h2>
+						</div>
+					</section>
+				</div>
+				<div class="container imagenes">
+					<div class= "row img-row">
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="navs.html"><img src="images/navs1.png" alt="nav" class="img-responsive im-link"></a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="navbars.html"><img src="images/navbar2.png" alt="navbar" class="img-responsive im-link"></a>
+						</div>
+						<div class="clearfix visible-sm-block"></div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="glyphicons.html"><img src="images/glyphicons3.png" alt="glyphicon" class="img-responsive im-link"></a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="labels.html"><img src="images/label4.png" alt="label" class="img-responsive im-link"></a>
+						</div>
+
+					</div>
+					
+					<div class= "row img-row">
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="jumbotron.html"><img src="images/jumbotron5.png" alt="jumbotron" class="img-responsive im-link"></a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="thumbnails.html"><img src="images/thumbnails6.png" alt="thumbnails" class="img-responsive im-link"></a>
+						</div>
+						<div class="clearfix visible-sm-block"></div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="buttons.html"><img src="images/buttons7.png" alt="buttons" class="img-responsive im-link"></a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="breadcrumbs.html"><img src="images/breadcrumbs8.png" alt="breadcrumbs" class="img-responsive im-link"></a>
+						</div>
+
+					</div>
+					
+					<div class= "row img-row">
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="panels.html"><img src="images/panel9.png" alt="panels" class="img-responsive im-link"></a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="pagination.html"><img src="images/pagination10.png" alt="pagination" class="img-responsive im-link"></a>
+						</div>
+						<div class="clearfix visible-sm-block"></div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="progressbar.html"><img src="images/progressbar11.png" alt="progressbar" class="img-responsive im-link"></a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<a href="alerts.html"><img src="images/alerts12.png" alt="alert" class="img-responsive im-link"></a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+			
+		<footer>
+			<div class= "row separador">
+				<div clas= "col-xs-12">
+					<img src="images/barra separadora mod 3.png" alt="separador" width=100%>
+				</div>
+			</div>
+			<div class="footer-region">
+				<div class="container">
+				
+					<div class="row link-externo">
+						<div class="col-xs-12">
+							<ul class="list-inlie">
+								<li><a href="https://www.facebook.com/getbootstrap/"><img src="images/facebook-icon.png" alt="nav" width=50px class="img-externa"></a></li>
+								<li><a href="https://twitter.com/getbootstrap"><img src="images/twitter-icon.png" alt="nav" width= 50px class="img-externa"></a></li>
+								<li><a href="http://getbootstrap.com/"><img src="images/bootstrap-icon.png" alt="nav" width= 50px class="img-externa"></a></li>
+							</ul>
+						</div><!-- /.col-xs-12 -->
+					</div>
+					<div class="row link-externo">
+						<div class="col-xs-12">
+							<p class="text-center">Este tutorial es creado con fines educativos para la clase de Sistemas expertos</p>
+							<p class="text-center">Facultad de Ingeniería en Sistamas, Segundo Periodo 2016</p>
+							<p class="text-center">UNAH Ciundad Universitaria, Tegucigalpa Honduras</p>
+						</div><!-- /.col-xs-12 -->
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src= "js/jquery.min.js"></script>
+		<script src= "js/bootstrap.min.js"></script>
+	</body>	
+</html>

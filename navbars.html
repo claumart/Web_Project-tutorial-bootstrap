@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang = en>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>tutorial bootstrap-navbars</title>
+		<meta name= "viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+		<link rel="icon" type="image/png" href="images/favicon-bootstrap.png">
+		<link rel= "stylesheet" href= "css/bootstrap.min.css">
+		<link rel= "stylesheet" href= "hojas-estilo/tutoriales.css">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top navbar navbar-inverse barra-header">
+  				<div class="container-fluid">
+   	 				<!-- Brand and toggle get grouped for better mobile display -->
+    				<div class="navbar-header">
+      					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        					<span class="sr-only">Toggle navigation</span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+      					</button>
+      					<a class="navbar-brand" href="inicio.html"><img alt="Brand" src="images/home-icon.png" width= 40px class="img-brand"></a>
+    				</div>
+
+    				<!-- Collect the nav links, forms, and other content for toggling -->
+    				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      					<ul class="nav navbar-nav">
+							<li class="dropdown">
+          					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Temario <span class="caret"></span></a>
+		      					<ul class="dropdown-menu">
+		        					<li><a href="navs.html"><p class="toggle-menu">NAVS</p></a></li>
+		        					<li><a href="navbars.html"><p class="toggle-menu">NAVBARS</p></a></li>
+		        					<li><a href="glyphicons.html"><p class="toggle-menu">GLYPHICONS</p></a></li>
+		        					<li><a href="labels.html"><p class="toggle-menu">LABELS</p></a></li>
+		        					<li><a href="jumbotron.html"><P class="toggle-menu">JUMBOTRON</P></a></li>
+		        					<li><a href="thumbnails.html"><p class="toggle-menu">THUMBNAILS</p></a></li>
+		        					<li><a href="buttons.html"><p class="toggle-menu">BUTTONS</p></a></li>
+		        					<li><a href="breadcrumbs.html"><p class="toggle-menu">BREADCRUMNS</p></a></li>
+		        					<li><a href="panels.html"><p class="toggle-menu">PANELS</p></a></li>
+		        					<li><a href="pagination.html"><p class="toggle-menu">PAGINATION</p></a></li>
+		        					<li><a href="progressbar.html"><p class="toggle-menu">PROGRESSBAR</p></a></li>
+		        					<li><a href="alerts.html"><p class="toggle-menu">ALERTS</p></a></li>
+		      					</ul>
+        					</li>
+        					<li><a href="form.html">Boletines <span class="sr-only">(current)</span></a></li>
+      					</ul>
+      					<ul class="nav navbar-nav navbar-right">
+        					<li>
+								<form class="navbar-form navbar-left" role="search">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Search">
+									</div>
+									<button type="submit" class="btn-default"><p class="boton-buscar text-center">Buscar</p></button>
+								</form>
+        					</li>
+      					</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+			<div class= "row separador">
+				<div clas= "col-xs-12">
+					<img src="images/barra separadora mod 3 inversa.png" alt="separador" width=100% id="separador-header">
+				</div>
+			</div>
+		</header>
+		<!--Aquí empieza el tutorial-->
+		
+		<section class="main-container">	
+			<div class="row"> 
+				<div class="col-sm-9 ">
+					<section class="titulo">
+						<h2 class="text-center animated tada">NAVBARS</h2>
+					</section>
+					<section class= "explicacion text-justify">
+						<p>	
+							Las barras de navegación son componentes adaptados al diseño web <i>responsive</i>responsive y que se utilizan 
+							como elemento principal de navegación tanto en las aplicaciones como en los sitios web.
+						</p>
+						<p>
+							En los dispositivos móviles se muestran inicialmente minimizadas y al pulsar sobre ellas, se despliegan todas sus opciones. 
+							Si la anchura del dispositivo aumenta hasta un nivel suficiente, las barras de navegación muestran todos sus contenidos horizontalmente.
+						</p>
+						<p>
+							Dependiendo del contenido de tu barra de navegación, puede ser necesario modificar el punto a partir del cual se muestra horizontal en vez 
+							de minimizada. Para ello, modifica el valor de la variable <code>@grid-float-breakpoint</code> en tu archivo LESS o añade tu propia <i>media query</i> en el archivo CSS.
+						</p><br>
+						<h4>Barra de Navegación Básica</h4>
+						<p> Ejemplo:</p>
+					</section>
+					
+					<section class= "codigo">
+						<pre>
+&ltnav class="navbar navbar-default" role="navigation"&gt
+  &lt!-- El logotipo y el icono que despliega el menú se agrupan
+       para mostrarlos mejor en los dispositivos móviles --&gt
+  &ltdiv class="navbar-header"&gt
+    &ltbutton type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target=".navbar-ex1-collapse"&gt
+      &ltspan class="sr-only"&gtDesplegar navegación&lt/span&gt
+      &ltspan class="icon-bar"&gt&lt/span&gt
+      &ltspan class="icon-bar"&gt&lt/span&gt
+      &ltspan class="icon-bar"&gt&lt/span&gt
+    &lt/button&gt
+    &lta class="navbar-brand" href="#"&gtLogotipo&lt/a&gt
+  &lt/div&gt
+ 
+  &lt!-- Agrupar los enlaces de navegación, los formularios y cualquier
+       otro elemento que se pueda ocultar al minimizar la barra --&gt
+  &ltdiv class="collapse navbar-collapse navbar-ex1-collapse"&gt
+    &ltul class="nav navbar-nav"&gt
+      &ltli class="active"&gt&lta href="#"&gtEnlace #1&lt/a&gt&lt/li&gt
+      &ltli&gt&lta href="#"&gtEnlace #2&lt/a&gt&lt/li&gt
+      &ltli class="dropdown"&gt
+        &lta href="#" class="dropdown-toggle" data-toggle="dropdown"&gt
+          Menú #1 &ltb class="caret"&gt&lt/b&gt
+        &lt/a&gt
+        &ltul class="dropdown-menu"&gt
+          &ltli&gt&lta href="#"&gtAcción #1&lt/a&gt&lt/li&gt
+          &ltli&gt&lta href="#"&gtAcción #2&lt/a&gt&lt/li&gt
+          &ltli&gt&lta href="#"&gtAcción #3&lt/a&gt&lt/li&gt
+          &ltli class="divider"&gt&lt/li&gt
+          &ltli&gt&lta href="#"&gtAcción #4&lt/a&gt&lt/li&gt
+          &ltli class="divider"&gt&lt/li&gt
+          &ltli&gt&lta href="#"&gtAcción #5&lt/a&gt&lt/li&gt
+        &lt/ul&gt
+      &lt/li&gt
+    &lt/ul&gt
+ 
+    &ltform class="navbar-form navbar-left" role="search"&gt
+      &ltdiv class="form-group"&gt
+        &ltinput type="text" class="form-control" placeholder="Buscar"&gt
+      &lt/div&gt
+      &ltbutton type="submit" class="btn btn-default"&gtEnviar&lt/button&gt
+    &lt/form&gt
+ 
+    &ltul class="nav navbar-nav navbar-right"&gt
+      &ltli&gt&lta href="#"&gtEnlace #3&lt/a&gt&lt/li&gt
+      &ltli class="dropdown"&gt
+        &lta href="#" class="dropdown-toggle" data-toggle="dropdown"&gt
+          Menú #2 &ltb class="caret"&gt&lt/b&gt
+        &lt/a&gt
+        &ltul class="dropdown-menu"&gt
+          &ltli&gt&lta href="#"&gtAcción #1&lt/a&gt&lt/li&gt
+          &ltli&gt&lta href="#"&gtAcción #2&lt/a&gt&lt/li&gt
+          &ltli&gt&lta href="#"&gtAcción #3&lt/a&gt&lt/li&gt
+          &ltli class="divider"&gt&lt/li&gt
+          &ltli&gt&lta href="#"&gtAcción #4&lt/a&gt&lt/li&gt
+        &lt/ul&gt
+      &lt/li&gt
+    &lt/ul&gt
+  &lt/div&gt
+&lt/nav&gt
+						</pre>
+					</section>
+					<section class="resultado">
+						<h4>
+							Resultado
+						</h4>
+						<div class="ejemplo">
+								<nav class="navbar navbar-default" role="navigation">
+								  <!-- El logotipo y el icono que despliega el menú se agrupan
+									   para mostrarlos mejor en los dispositivos móviles -->
+								  <div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse"
+											data-target=".navbar-ex1-collapse">
+									  <span class="sr-only">Desplegar navegación</span>
+									  <span class="icon-bar"></span>
+									  <span class="icon-bar"></span>
+									  <span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="#">Logotipo</a>
+								  </div>
+								 
+								  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+									   otro elemento que se pueda ocultar al minimizar la barra -->
+								  <div class="collapse navbar-collapse navbar-ex1-collapse">
+									<ul class="nav navbar-nav">
+									  <li class="active"><a href="#">Enlace #1</a></li>
+									  <li><a href="#">Enlace #2</a></li>
+									  <li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										  Menú #1 <b class="caret"></b>
+										</a>
+										<ul class="dropdown-menu">
+										  <li><a href="#">Acción #1</a></li>
+										  <li><a href="#">Acción #2</a></li>
+										  <li><a href="#">Acción #3</a></li>
+										  <li class="divider"></li>
+										  <li><a href="#">Acción #4</a></li>
+										  <li class="divider"></li>
+										  <li><a href="#">Acción #5</a></li>
+										</ul>
+									  </li>
+									</ul>
+								 
+									<form class="navbar-form navbar-left" role="search">
+									  <div class="form-group">
+										<input type="text" class="form-control" placeholder="Buscar">
+									  </div>
+									  <button type="submit" class="btn btn-warning">Enviar</button>
+									</form>
+								 
+									<ul class="nav navbar-nav navbar-right">
+									  <li><a href="#">Enlace #3</a></li>
+									  <li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										  Menú #2 <b class="caret"></b>
+										</a>
+										<ul class="dropdown-menu">
+										  <li><a href="#">Acción #1</a></li>
+										  <li><a href="#">Acción #2</a></li>
+										  <li><a href="#">Acción #3</a></li>
+										  <li class="divider"></li>
+										  <li><a href="#">Acción #4</a></li>
+										</ul>
+									  </li>
+									</ul>
+								  </div>
+								</nav>
+						</div>
+						<br>
+						<br>
+					</section>
+					<div class="video">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/95kisnKdJwo"></iframe>
+						</div>
+					</div>
+					
+					
+				</div>
+				<aside class="col-sm-3 hidden-xs">
+					<h1 class="text-center texto-aside">
+						OTROS TEMAS
+					</h1>
+					<div class="list-group">
+						<a href="navbars.html" class="list-group-item text-center"><p class="prueba">NAVBARS</p></a>
+						<a href="glyphicons.html" class="list-group-item text-center"><p class="prueba">GLYPHICONS</p></a>
+						<a href="labels.html" class="list-group-item text-center"><p class="prueba">LABELS</p></a>
+						<a href="jumbotron.html" class="list-group-item text-center"><p class="prueba">JUMBOTRON</p></a>
+						<a href="thumbnails.html" class="list-group-item text-center"><p class="prueba">THUMBNAILS</p></a>
+						<a href="buttons.html" class="list-group-item text-center"><p class="prueba">BUTTONS</p></a>
+						<a href="breadcrumbs.html" class="list-group-item text-center"><p class="prueba">BREADCRUMBS</p></a>
+						<a href="panels.html" class="list-group-item text-center"><p class="prueba">PANELS</p></a>
+						<a href="pagination.html" class="list-group-item text-center"><p class="prueba">PAGINATION</p></a>
+						<a href="progressbar.html" class="list-group-item text-center"><p class="prueba">PROGRESSBAR</p></a>
+						<a href="alerts.html" class="list-group-item text-center"><p class="prueba">ALERTS</p></a>
+					</div>
+				</aside>
+			</div>
+		</section>
+		
+		<footer>
+			<div class= "row separador">
+				<div clas= "col-xs-12">
+					<img src="images/barra separadora mod 3.png" alt="separador" width=100%>
+				</div>
+			</div>
+			<div class="footer-region">
+				<div class="container">
+				
+					<div class="row link-externo">
+						<div class="col-xs-12">
+							<ul class="list-inlie">
+								<li><a href="https://www.facebook.com/getbootstrap/"><img src="images/facebook-icon.png" alt="nav" width=50px class="img-externa"></a></li>
+								<li><a href="https://twitter.com/getbootstrap"><img src="images/twitter-icon.png" alt="nav" width= 50px class="img-externa"></a></li>
+								<li><a href="http://getbootstrap.com/"><img src="images/bootstrap-icon.png" alt="nav" width= 50px class="img-externa"></a></li>
+							</ul>
+						</div><!-- /.col-xs-12 -->
+					</div>
+					<div class="row link-externo">
+						<div class="col-xs-12">
+							<p class="text-center">Este tutorial es creado con fines educativos para la clase de Sistemas expertos</p>
+							<p class="text-center">Facultad de Ingeniería en Sistamas, Segundo Periodo 2016</p>
+							<p class="text-center">UNAH Ciundad Universitaria, Tegucigalpa Honduras</p>
+						</div><!-- /.col-xs-12 -->
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src= "js/jquery.min.js"></script>
+		<script src= "js/bootstrap.min.js"></script>
+	</body>
+</html>

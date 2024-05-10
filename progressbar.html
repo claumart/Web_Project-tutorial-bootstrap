@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang = en>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>tutorial bootstrap-progressbar</title>
+		<meta name= "viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+		<link rel="icon" type="image/png" href="images/favicon-bootstrap.png">
+		<link rel= "stylesheet" href= "css/bootstrap.min.css">
+		<link rel= "stylesheet" href= "hojas-estilo/tutoriales.css">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top navbar navbar-inverse barra-header">
+  				<div class="container-fluid">
+   	 				<!-- Brand and toggle get grouped for better mobile display -->
+    				<div class="navbar-header">
+      					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        					<span class="sr-only">Toggle navigation</span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+      					</button>
+      					<a class="navbar-brand" href="inicio.html"><img alt="Brand" src="images/home-icon.png" width= 40px class="img-brand"></a>
+    				</div>
+
+    				<!-- Collect the nav links, forms, and other content for toggling -->
+    				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      					<ul class="nav navbar-nav">
+							<li class="dropdown">
+          					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Temario <span class="caret"></span></a>
+		      					<ul class="dropdown-menu">
+		        					<li><a href="navs.html"><p class="toggle-menu">NAVS</p></a></li>
+		        					<li><a href="navbars.html"><p class="toggle-menu">NAVBARS</p></a></li>
+		        					<li><a href="glyphicons.html"><p class="toggle-menu">GLYPHICONS</p></a></li>
+		        					<li><a href="labels.html"><p class="toggle-menu">LABELS</p></a></li>
+		        					<li><a href="jumbotron.html"><P class="toggle-menu">JUMBOTRON</P></a></li>
+		        					<li><a href="thumbnails.html"><p class="toggle-menu">THUMBNAILS</p></a></li>
+		        					<li><a href="buttons.html"><p class="toggle-menu">BUTTONS</p></a></li>
+		        					<li><a href="breadcrumbs.html"><p class="toggle-menu">BREADCRUMNS</p></a></li>
+		        					<li><a href="panels.html"><p class="toggle-menu">PANELS</p></a></li>
+		        					<li><a href="pagination.html"><p class="toggle-menu">PAGINATION</p></a></li>
+		        					<li><a href="progressbar.html"><p class="toggle-menu">PROGRESSBAR</p></a></li>
+		        					<li><a href="alerts.html"><p class="toggle-menu">ALERTS</p></a></li>
+		      					</ul>
+        					</li>
+        					<li><a href="form.html">Boletines <span class="sr-only">(current)</span></a></li>
+      					</ul>
+      					<ul class="nav navbar-nav navbar-right">
+        					<li>
+								<form class="navbar-form navbar-left" role="search">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Search">
+									</div>
+									<button type="submit" class="btn-default"><p class="boton-buscar text-center">Buscar</p></button>
+								</form>
+        					</li>
+      					</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+			<div class= "row separador">
+				<div clas= "col-xs-12">
+					<img src="images/barra separadora mod 3 inversa.png" alt="separador" width=100% id="separador-header">
+				</div>
+			</div>
+		</header>
+		<!--Aquí empieza el tutorial-->
+		
+		<section class="main-container">	
+			<div class="row"> 
+				<div class="col-sm-9 ">
+					<section class="titulo">
+						<h2 class="text-center">PROGRESS BARS</h2>
+					</section>
+					<section class= "explicacion text-justify">
+						<p>	
+							Las barras de progreso permiten mostrar de forma continua el estado de ejecución de una tarea.
+							Como sucede con muchos otros componentes, Bootstrap 3 permite crear barras de progreso contextuales, 
+							que modifican su aspecto para adecuarlo al concepto de éxito, información, aviso o error. Ejemplo:
+						<br>
+						</p>
+						<h4>Ejemplo</h4>
+						<p>
+							El siguiente ejemplo muestra el código HTML recomendado para crear la barra de progreso, que incluye los atributos necesarios para mejorar su accesibilidad:
+						</p>
+					</section>
+					
+					<section class= "codigo">
+						<pre>
+&ltdiv class="progress"&gt
+  &ltdiv class="progress-bar progress-bar-success" role="progressbar"
+       aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+       style="width: 40%"&gt
+    &ltspan class="sr-only"&gt40% completado (éxito)&lt/span&gt
+  &lt/div&gt
+&lt/div&gt
+ 
+&ltdiv class="progress"&gt
+  &ltdiv class="progress-bar progress-bar-info" role="progressbar"
+       aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+       style="width: 20%"&gt
+    &ltspan class="sr-only"&gt20% completado&lt/span&gt
+  &lt/div&gt
+&lt/div&gt
+ 
+&ltdiv class="progress"&gt
+  &ltdiv class="progress-bar progress-bar-warning" role="progressbar"
+       aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+       style="width: 60%"&gt
+    &ltspan class="sr-only"&gt60% completado (aviso)&lt/span&gt
+  &lt/div&gt
+&lt/div&gt
+ 
+&ltdiv class="progress"&gt
+  &ltdiv class="progress-bar progress-bar-danger" role="progressbar"
+       aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+       style="width: 80%"&gt
+    &ltspan class="sr-only"&gt80% completado (peligro / error)&lt/span&gt
+  &lt/div&gt
+&lt/div&gt
+						</pre>
+					</section>
+					<section class="resultado">
+						<h4>
+							Resultado
+						</h4>
+						<div class="ejemplo">
+							<div class="progress">
+							  <div class="progress-bar progress-bar-success" role="progressbar"
+								   aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+								   style="width: 40%">
+								<span class="sr-only">40% completado (éxito)</span>
+							  </div>
+							</div>
+							 
+							<div class="progress">
+							  <div class="progress-bar progress-bar-info" role="progressbar"
+								   aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+								   style="width: 20%">
+								<span class="sr-only">20% completado</span>
+							  </div>
+							</div>
+							 
+							<div class="progress">
+							  <div class="progress-bar progress-bar-warning" role="progressbar"
+								   aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+								   style="width: 60%">
+								<span class="sr-only">60% completado (aviso)</span>
+							  </div>
+							</div>
+							 
+							<div class="progress">
+							  <div class="progress-bar progress-bar-danger" role="progressbar"
+								   aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+								   style="width: 80%">
+								<span class="sr-only">80% completado (peligro / error)</span>
+							  </div>
+							</div>
+						</div>
+						<br>
+						<br>
+					</section>
+					<section class= "explicacion text-justify">
+						<h3>Barras de Proceso Cebreadas</h3>
+						<p>
+							Las barras cebreadas (del inglés "<em>striped</em>") muestran un patrón de franjas oblicuas que modifican el aspecto básico de 
+							las barras de progreso por defecto. Como las franjas se crean con gradientes de CSS, este tipo de barras de progreso no funcionan en Internet Explorer 8. Ejemplo:
+						</p>
+					</section>
+					
+					<section class= "codigo">
+						<pre>
+&ltdiv class="progress progress-striped"&gt
+  &ltdiv class="progress-bar progress-bar-success" role="progressbar"
+       aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+       style="width: 40%"&gt
+    &ltspan class="sr-only"&gt40% completado (éxito)&lt/span&gt
+  &lt/div&gt
+&lt/div&gt
+ 
+&ltdiv class="progress progress-striped"&gt
+  &ltdiv class="progress-bar progress-bar-info" role="progressbar"
+       aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+       style="width: 20%"&gt
+    &ltspan class="sr-only"&gt20% completado&lt/span&gt
+  &lt/div&gt
+&lt/div&gt
+ 
+&ltdiv class="progress progress-striped"&gt
+  &ltdiv class="progress-bar progress-bar-warning" role="progressbar"
+       aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+       style="width: 60%"&gt
+    &ltspan class="sr-only"&gt60% completado (aviso)&lt/span&gt
+  &lt/div&gt
+&lt/div&gt
+ 
+&ltdiv class="progress progress-striped"&gt
+  &ltdiv class="progress-bar progress-bar-danger" role="progressbar"
+       aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+       style="width: 80%"&gt
+    &ltspan class="sr-only"&gt80% completado (peligro / error)&lt/span&gt
+  &lt/div&gt
+&lt/div&gt
+
+						</pre>
+					</section>
+					<section ="resultado">
+						<h4>
+							Resultado
+						</h4>
+						<div class="ejemplo">
+							<div class="progress progress-striped">
+							  <div class="progress-bar progress-bar-success" role="progressbar"
+								   aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+								   style="width: 40%">
+								<span class="sr-only">40% completado (éxito)</span>
+							  </div>
+							</div>
+							 
+							<div class="progress progress-striped">
+							  <div class="progress-bar progress-bar-info" role="progressbar"
+								   aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+								   style="width: 20%">
+								<span class="sr-only">20% completado</span>
+							  </div>
+							</div>
+							 
+							<div class="progress progress-striped">
+							  <div class="progress-bar progress-bar-warning" role="progressbar"
+								   aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+								   style="width: 60%">
+								<span class="sr-only">60% completado (aviso)</span>
+							  </div>
+							</div>
+							 
+							<div class="progress progress-striped">
+							  <div class="progress-bar progress-bar-danger" role="progressbar"
+								   aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+								   style="width: 80%">
+								<span class="sr-only">80% completado (peligro / error)</span>
+							  </div>
+							</div>
+						</div>
+						<br>
+						<br>
+					</section>
+					<div class="video">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/093pKz4YzY4"></iframe>
+						</div>
+					</div>
+					
+					
+				</div>
+				<aside class="col-sm-3 hidden-xs">
+					<h1 class="text-center texto-aside">
+						OTROS TEMAS
+					</h1>
+					<div class="list-group">
+						<a href="navbars.html" class="list-group-item text-center"><p class="prueba">NAVBARS</p></a>
+						<a href="glyphicons.html" class="list-group-item text-center"><p class="prueba">GLYPHICONS</p></a>
+						<a href="labels.html" class="list-group-item text-center"><p class="prueba">LABELS</p></a>
+						<a href="jumbotron.html" class="list-group-item text-center"><p class="prueba">JUMBOTRON</p></a>
+						<a href="thumbnails.html" class="list-group-item text-center"><p class="prueba">THUMBNAILS</p></a>
+						<a href="buttons.html" class="list-group-item text-center"><p class="prueba">BUTTONS</p></a>
+						<a href="breadcrumbs.html" class="list-group-item text-center"><p class="prueba">BREADCRUMBS</p></a>
+						<a href="panels.html" class="list-group-item text-center"><p class="prueba">PANELS</p></a>
+						<a href="pagination.html" class="list-group-item text-center"><p class="prueba">PAGINATION</p></a>
+						<a href="progressbar.html" class="list-group-item text-center"><p class="prueba">PROGRESSBAR</p></a>
+						<a href="alerts.html" class="list-group-item text-center"><p class="prueba">ALERTS</p></a>
+					</div>
+				</aside>
+			</div>
+		</section>
+		
+		<footer>
+			<div class= "row separador">
+				<div clas= "col-xs-12">
+					<img src="images/barra separadora mod 3.png" alt="separador" width=100%>
+				</div>
+			</div>
+			<div class="footer-region">
+				<div class="container">
+				
+					<div class="row link-externo">
+						<div class="col-xs-12">
+							<ul class="list-inlie">
+								<li><a href="https://www.facebook.com/getbootstrap/"><img src="images/facebook-icon.png" alt="nav" width=50px class="img-externa"></a></li>
+								<li><a href="https://twitter.com/getbootstrap"><img src="images/twitter-icon.png" alt="nav" width= 50px class="img-externa"></a></li>
+								<li><a href="http://getbootstrap.com/"><img src="images/bootstrap-icon.png" alt="nav" width= 50px class="img-externa"></a></li>
+							</ul>
+						</div><!-- /.col-xs-12 -->
+					</div>
+					<div class="row link-externo">
+						<div class="col-xs-12">
+							<p class="text-center">Este tutorial es creado con fines educativos para la clase de Sistemas expertos</p>
+							<p class="text-center">Facultad de Ingeniería en Sistamas, Segundo Periodo 2016</p>
+							<p class="text-center">UNAH Ciundad Universitaria, Tegucigalpa Honduras</p>
+						</div><!-- /.col-xs-12 -->
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src= "js/jquery.min.js"></script>
+		<script src= "js/bootstrap.min.js"></script>
+	</body>
+</html>
